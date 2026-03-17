@@ -1,15 +1,15 @@
 class Available < Formula
   desc "AI-powered project name finder with domain and package registry checks"
   homepage "https://github.com/bradleydwyer/available"
-  url "https://github.com/bradleydwyer/available/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "09ddd5b324b517c5d8cfda5d5d173bb04e541434ff4c12cd3d1d97a24fce05a2"
+  url "https://github.com/bradleydwyer/available/archive/refs/tags/v0.1.0.tar.gz"
+  sha256 "8e0d85ec91177295a0e5c228f7fc13f305306e330e7f21e1fa822500c740c7fd"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/bradleydwyer/available/releases/download/v1.1.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c2b5cc4cfb0bd5608ddeae80282e9bbfc1e58e4bc6bb49a7efa83204c2387fd2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b86ec445f05930b41095197c3609ff4a0edfed6ef0461d89cb5ef0a92c088cbe"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "377cf9ea93bac6d0739fbfbc0d3293aeda40a65d42bfbbf62aa4319f8f135a3f"
+    root_url "https://github.com/bradleydwyer/available/releases/download/v0.1.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "af38fbc264b24f547ccbf9ab3222aac6476fe23ec61046192a1328c0e790e30e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f99c493f0b58a7132322c6343eb3512c0acf10755ff249347657aed38f1b2095"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "183f247625699636177dd2f01c6a20cf54c4f0f0b4be64bf3acc6bdb729b3200"
   end
 
   depends_on "rust" => :build
