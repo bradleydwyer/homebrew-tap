@@ -1,15 +1,15 @@
 class Nanaban < Formula
   desc "Gemini image generation CLI (Nano Banana 2 / Pro)"
   homepage "https://github.com/bradleydwyer/nanaban"
-  url "https://github.com/bradleydwyer/nanaban/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "da7b23e56f4baac92041ca192d895f7c2bb74e5fc829bc494ead2478d1ef8d0b"
+  url "https://github.com/bradleydwyer/nanaban/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "b50910fb5be9745a526279becf7ecc16a1c7e21538ed7564e6f0cc4f114694de"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/bradleydwyer/nanaban/releases/download/v0.1.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "77fa10e784d34848574ba05258e2e313d5111ad82e347b4005245855bb25b435"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fc9955bc78b4af12466819f9685c769ce4ee02b2c112b219e8203fb00813c739"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "29f417b63f4cfd1026c6d4c185688230ec9b61c3fc692f6edf4e5c27e2722ad1"
+    root_url "https://github.com/bradleydwyer/nanaban/releases/download/v0.2.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d9d44e2f9e4766a8bc93d60e0336fa4aef560facb8be871aad963a5f458993b6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "dfc068952710cef43218d0b817ecd6bf369eb4e27eaf29fe5514175172a7bc75"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d4416586e9c6f7c8c02227370ac3d5b7491a7c2895f2bf0d8f6c0b59258cf244"
   end
 
   depends_on "rust" => :build
