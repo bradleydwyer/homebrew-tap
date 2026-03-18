@@ -1,26 +1,26 @@
 class Equip < Formula
   desc "Install SKILL.md files across AI coding agents"
   homepage "https://github.com/bradleydwyer/equip"
-  version "2.1.0"
+  version "2.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/equip/releases/download/v2.1.0/equip-aarch64-apple-darwin"
-      sha256 "934f1eb27ba9b106ffbfc606485ec792c0780bd61b72fbd6470ee7ad78777a6b"
+      url "https://github.com/bradleydwyer/equip/releases/download/v2.2.0/equip-aarch64-apple-darwin"
+      sha256 "0473e7af8e5844671a638f04bc9a9210845c2b040162b0dac1ebf57282d7322e"
     else
-      url "https://github.com/bradleydwyer/equip/releases/download/v2.1.0/equip-x86_64-apple-darwin"
-      sha256 "0022ba47c929dc15a721460b215e8500cf8ec4b6a20733871b345d21e2b5a42c"
+      url "https://github.com/bradleydwyer/equip/releases/download/v2.2.0/equip-x86_64-apple-darwin"
+      sha256 "8c6376291570ca290ca28246f5c6b1f51ce0fe09de71336d49a27194fddf19b7"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/equip/releases/download/v2.1.0/equip-aarch64-unknown-linux-gnu"
-      sha256 "15ae7c39a652ca71611acb657200422ee06bb7ffe933e6d3eb3af4856f46efa6"
+      url "https://github.com/bradleydwyer/equip/releases/download/v2.2.0/equip-aarch64-unknown-linux-gnu"
+      sha256 "9692b319d56658193173f2334d416db57337d2c66fd0b228ddc3e657f05913c6"
     else
-      url "https://github.com/bradleydwyer/equip/releases/download/v2.1.0/equip-x86_64-unknown-linux-gnu"
-      sha256 "74a2086bce909d7d3a8dde04db374a6a3cccf360fce519e165be44d3364a4311"
+      url "https://github.com/bradleydwyer/equip/releases/download/v2.2.0/equip-x86_64-unknown-linux-gnu"
+      sha256 "fa51de2321f5eb0f9a67abedbfb5ddb70ec902d8916737c01f016c9c1b8a26b6"
     end
   end
 
