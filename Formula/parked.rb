@@ -1,15 +1,15 @@
 class Parked < Formula
   desc "Tiered domain availability checker (DNS, WHOIS, RDAP) with CLI and MCP server"
   homepage "https://github.com/bradleydwyer/parked"
-  url "https://github.com/bradleydwyer/parked/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "c2f457bc57876d446da6b37c7e24c36d15cbf5286bc909f554966625dbc5db3e"
+  url "https://github.com/bradleydwyer/parked/archive/refs/tags/v2.1.0.tar.gz"
+  sha256 "47836c796b7ec4717b5cf86613fa394d869b3fefd55899ed9b0bb845fc737a35"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/bradleydwyer/parked/releases/download/v2.0.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "35a8c02d7aa59b1eaf169c39c4cecc5cb3176862224a0441edca2835bd27df80"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "21f01e5472314377e5df8e82d7f2174f4cbfff17317c1e6fab099cf52b4df11b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3e2e97ad533e2b14d9e2389fcd12648806da3370fcf7845795d4d9bd5e355136"
+    root_url "https://github.com/bradleydwyer/parked/releases/download/v2.1.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5667c02e5d4971d743177b6e4c4db5123339d44537769fc4998a60affa304114"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b158d0dc096f00a744912eb6541ddbfbb473fe1ff89837fdc1b611f780a151dd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "09c53b8949122e01f5536b258b04e0186c171c7dd9985244fb13a70844bbdc24"
   end
 
   depends_on "rust" => :build
