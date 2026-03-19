@@ -1,26 +1,21 @@
 class Sloppy < Formula
   desc "Fast regex-based detection of AI prose tells"
   homepage "https://github.com/bradleydwyer/sloppy"
-  version "1.0.2"
+  version "1.0.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/sloppy/releases/download/v1.0.2/sloppy-aarch64-apple-darwin"
-      sha256 "26abf4436e8aae758edfbfbbc0a16e01990b1c2b0e94769c64d9a87ff60758dd"
-    else
-      url "https://github.com/bradleydwyer/sloppy/releases/download/v1.0.2/sloppy-x86_64-apple-darwin"
-      sha256 "35ad8df0fdefd1e712495a954ee7826a43c319c7fb49b91922845120dd0b1d5d"
-    end
+    url "https://github.com/bradleydwyer/sloppy/releases/download/v1.0.3/sloppy-aarch64-apple-darwin"
+    sha256 "e52a8b87e41398f1e4eed76dbb6efa27105da31daba0c3916c05c456a3fc6875"
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/sloppy/releases/download/v1.0.2/sloppy-aarch64-unknown-linux-gnu"
-      sha256 "f5fd9a9143e052471453d05166342839cff6f2a84f6c491f636c0625d800da66"
+      url "https://github.com/bradleydwyer/sloppy/releases/download/v1.0.3/sloppy-aarch64-unknown-linux-gnu"
+      sha256 "4b08cd4a6c40763fd97139a534d87f5e60f410f56e2ce917996c111ccb7a2f15"
     else
-      url "https://github.com/bradleydwyer/sloppy/releases/download/v1.0.2/sloppy-x86_64-unknown-linux-gnu"
-      sha256 "2f577caaedf4efc49f90612bcb3537031e2ae5ed4eeb36ba7ce46077ee6fa788"
+      url "https://github.com/bradleydwyer/sloppy/releases/download/v1.0.3/sloppy-x86_64-unknown-linux-gnu"
+      sha256 "2bbd1dee1d3a2b7f42e0832531748f51c92d05be90927d7d447cc70485945742"
     end
   end
 
