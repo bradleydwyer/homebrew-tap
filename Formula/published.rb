@@ -1,5 +1,5 @@
 class Published < Formula
-  desc "App store name availability checker"
+  desc "App store name availability checker with CLI and MCP server"
   homepage "https://github.com/bradleydwyer/published"
   version "1.0.0"
   license "MIT"
