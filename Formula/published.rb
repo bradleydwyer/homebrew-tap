@@ -1,26 +1,26 @@
 class Published < Formula
-  desc "App store name availability checker with CLI and MCP server"
+  desc "App store name availability checker"
   homepage "https://github.com/bradleydwyer/published"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/published/releases/download/v1.0.0/published-aarch64-apple-darwin"
-      sha256 "7bc861e3615cd01864b1d378e6c3ddfc8cc1618f633125e25ed0be434483fbfb"
+      url "https://github.com/bradleydwyer/published/releases/download/v1.0.1/published-aarch64-apple-darwin"
+      sha256 "472a6caca9c34e3ed8f9ca8d2b8cbcd9c3bf1242d4667d56f6d89ecc4f14a96a"
     else
-      url "https://github.com/bradleydwyer/published/releases/download/v1.0.0/published-x86_64-apple-darwin"
-      sha256 "eab5d74792fba98c0176f2746a36b73e81d3e6218bbd683ba8c192dd1c0be0eb"
+      url "https://github.com/bradleydwyer/published/releases/download/v1.0.1/published-x86_64-apple-darwin"
+      sha256 "98ee339f2b426ad5f2743cef7bf9578031133b1bb1002468a686c3855799e74a"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/published/releases/download/v1.0.0/published-aarch64-unknown-linux-gnu"
-      sha256 "7abb70f27489f3a5f6efd7b75ba80791a9492e098efef675f447197388fb48aa"
+      url "https://github.com/bradleydwyer/published/releases/download/v1.0.1/published-aarch64-unknown-linux-gnu"
+      sha256 "ff65aff7d295460c1f51810440305b6c277fbd4dabe8d520cf2b676af08d1d91"
     else
-      url "https://github.com/bradleydwyer/published/releases/download/v1.0.0/published-x86_64-unknown-linux-gnu"
-      sha256 "c1f7fd4565832640b4b25af36b45097034f6dd9f8cc5ec5dda5d90f5c364e855"
+      url "https://github.com/bradleydwyer/published/releases/download/v1.0.1/published-x86_64-unknown-linux-gnu"
+      sha256 "6c5e5a93a8a599e16399af1888696e1b3e37363df32fa5cff71f164adbfea8e2"
     end
   end
 
