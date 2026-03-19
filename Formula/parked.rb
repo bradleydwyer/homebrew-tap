@@ -1,26 +1,21 @@
 class Parked < Formula
   desc "Tiered domain availability checker (DNS, WHOIS, RDAP) with CLI and MCP server"
   homepage "https://github.com/bradleydwyer/parked"
-  version "2.2.3"
+  version "2.2.4"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/parked/releases/download/v2.2.3/parked-aarch64-apple-darwin"
-      sha256 "02b7125ffe83d9ae1edb02f572b30c37aea42e24a73c90e0794ec2aa61f51f10"
-    else
-      url "https://github.com/bradleydwyer/parked/releases/download/v2.2.3/parked-x86_64-apple-darwin"
-      sha256 "9874587491143ad93966f3481a603cf24de205c9fb0c40f4876c78fb8def91a5"
-    end
+    url "https://github.com/bradleydwyer/parked/releases/download/v2.2.4/parked-aarch64-apple-darwin"
+    sha256 "02b1457fac3de2536d65072e88cb5e86d85273bd40307f955b8d4f7eea635c22"
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/parked/releases/download/v2.2.3/parked-aarch64-unknown-linux-gnu"
-      sha256 "decdc3bcbc6d2ad274896c1dc998aef17934eecb18f68fd22d6cbd771e8f6ef7"
+      url "https://github.com/bradleydwyer/parked/releases/download/v2.2.4/parked-aarch64-unknown-linux-gnu"
+      sha256 "19fa4b4fb3a34697c11a4c12513bd29fcf08a8ff37f25b6412b3a77f4c41f15f"
     else
-      url "https://github.com/bradleydwyer/parked/releases/download/v2.2.3/parked-x86_64-unknown-linux-gnu"
-      sha256 "95d70c171783f33767109c5d671078be5ea046ffda557fcf3f8d060aca69882d"
+      url "https://github.com/bradleydwyer/parked/releases/download/v2.2.4/parked-x86_64-unknown-linux-gnu"
+      sha256 "63bfd4e386733b8c9ff758987302891192b8ea0c4fe78210e48159df883fdf89"
     end
   end
 
