@@ -1,21 +1,21 @@
 class Staked < Formula
   desc "Package registry name availability checker with CLI and MCP server"
   homepage "https://github.com/bradleydwyer/staked"
-  version "2.0.5"
+  version "2.1.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/bradleydwyer/staked/releases/download/v2.0.5/staked-aarch64-apple-darwin"
-    sha256 "9b539ba35ad1bd2b5d5efd563a31fba2bde23135326bb169fc0c3e2c2a1ed351"
+    url "https://github.com/bradleydwyer/staked/releases/download/v2.1.0/staked-aarch64-apple-darwin"
+    sha256 "ac3f1608a3c5376987568137ec6ef406f9540897fd8ae7fe8619ecef3fb80060"
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/staked/releases/download/v2.0.5/staked-aarch64-unknown-linux-gnu"
-      sha256 "5e5c97187b940930902b8c5c0ba4a824d1caa61efe47722f286f44ec1cadc3a3"
+      url "https://github.com/bradleydwyer/staked/releases/download/v2.1.0/staked-aarch64-unknown-linux-gnu"
+      sha256 "d0959f2c69f50519847817ba8dbe07f98e6f277d17048d57196bedb626d3b7ba"
     else
-      url "https://github.com/bradleydwyer/staked/releases/download/v2.0.5/staked-x86_64-unknown-linux-gnu"
-      sha256 "75fddfc240b6a7935e6b98c3158e0b8dcdc3e9b3fd7e560034eec0782cf5fd22"
+      url "https://github.com/bradleydwyer/staked/releases/download/v2.1.0/staked-x86_64-unknown-linux-gnu"
+      sha256 "7e42f124dd5b52910117a60a91903372e9bfcbcdb50a5b6a025c90d2d9f148b1"
     end
   end
 
