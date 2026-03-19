@@ -1,21 +1,21 @@
 class Available < Formula
   desc "AI-powered project name finder with domain and package registry checks"
   homepage "https://github.com/bradleydwyer/available"
-  version "1.4.0"
+  version "2.0.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/bradleydwyer/available/releases/download/v1.4.0/available-aarch64-apple-darwin"
-    sha256 "159d336c0f4a162f31c1dc08a612f946f91bcbabbdc42769fcf4a1bba3ec7b5c"
+    url "https://github.com/bradleydwyer/available/releases/download/v2.0.0/available-aarch64-apple-darwin"
+    sha256 "2382c8c2eef2f416dafb68e2b3887ed7dc610ded72c853c59373f5bbb5210316"
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/available/releases/download/v1.4.0/available-aarch64-unknown-linux-gnu"
-      sha256 "8ded77c38afbbd17815eaf8f1ec7a32c47267e8be24cd825fb515f10c826cec0"
+      url "https://github.com/bradleydwyer/available/releases/download/v2.0.0/available-aarch64-unknown-linux-gnu"
+      sha256 "3c4263c4b0ee022d3f14931e59cba40bb424c7ee86920d6c977700c445d3624d"
     else
-      url "https://github.com/bradleydwyer/available/releases/download/v1.4.0/available-x86_64-unknown-linux-gnu"
-      sha256 "3e7a78c820f55e3ad79ff2c4616763caa72b2f744fba66999f630ccda71fbfa4"
+      url "https://github.com/bradleydwyer/available/releases/download/v2.0.0/available-x86_64-unknown-linux-gnu"
+      sha256 "4171aca9f3dcbf52c9132893f750f9f0419f7115a29348225a5d791643593c11"
     end
   end
 
