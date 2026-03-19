@@ -1,24 +1,34 @@
 class SolcastProxy < Formula
   desc "Caching reverse proxy for the Solcast solar forecast API"
   homepage "https://github.com/bradleydwyer/solcast-proxy"
-  url "https://github.com/bradleydwyer/solcast-proxy/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "da9d5d2f3ad36dfd5380e9502db6563c26aa08bfc05fa5a0d0ec15e0cdc6f52f"
+  version "1.0.3"
   license "MIT"
 
-  bottle do
-    root_url "https://github.com/bradleydwyer/solcast-proxy/releases/download/v1.0.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5df53eec4792844f41b7eac2e98dac904aa5b8832795666b9d229fbe92760457"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "146ac147f71eb57102117ae4e21c77a87b5729d35f85377f4c96f4288c680ba7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7f562d5b25947bcab19f0da323f077a0da7b3c8e84dd10d2519925bfc3c0da32"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/bradleydwyer/solcast-proxy/releases/download/v1.0.3/solcast-proxy-aarch64-apple-darwin"
+      sha256 "447d7023f441ec3245fc6af305160c334c471378fb7ce92ad953fb21a71c68b0"
+    else
+      url "https://github.com/bradleydwyer/solcast-proxy/releases/download/v1.0.3/solcast-proxy-x86_64-apple-darwin"
+      sha256 "0e374d7fda5f13c2fe58d1a0dc0a1730429ca106865d89177f92c7a5adc80f34"
+    end
   end
 
-  depends_on "rust" => :build
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/bradleydwyer/solcast-proxy/releases/download/v1.0.3/solcast-proxy-aarch64-unknown-linux-gnu"
+      sha256 "954b805a62deba87624f26fc42e222d99269b8292b1a84969a0bbb19594e3f19"
+    else
+      url "https://github.com/bradleydwyer/solcast-proxy/releases/download/v1.0.3/solcast-proxy-x86_64-unknown-linux-gnu"
+      sha256 "6dddd4ddfa740f3d1cc48cc72c032c7782aa9116be6bf918dd4b4bfab058a830"
+    end
+  end
 
   def install
-    system "cargo", "install", "--locked", "--root", prefix, "--path", "."
+    bin.install Dir["solcast-proxy*"].first => "solcast-proxy"
   end
 
   test do
-    assert_match "solcast-proxy", shell_output("#{bin}/solcast-proxy --version")
+    assert_match "solcast-proxy", shell_output("\#{bin}/solcast-proxy --version")
   end
 end
