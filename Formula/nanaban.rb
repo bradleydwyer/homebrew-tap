@@ -1,26 +1,21 @@
 class Nanaban < Formula
   desc "Gemini image generation CLI (Nano Banana 2 / Pro)"
   homepage "https://github.com/bradleydwyer/nanaban"
-  version "0.2.4"
+  version "0.2.5"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/nanaban/releases/download/v0.2.4/nanaban-aarch64-apple-darwin"
-      sha256 "87ddf00e189ad058e586731eac990b5c0bba126a36e2714b2aa5c1fd3807f657"
-    else
-      url "https://github.com/bradleydwyer/nanaban/releases/download/v0.2.4/nanaban-x86_64-apple-darwin"
-      sha256 "91656fcc96c9316712570782f351526d450447972cd840856fc8aae1c4bb4406"
-    end
+    url "https://github.com/bradleydwyer/nanaban/releases/download/v0.2.5/nanaban-aarch64-apple-darwin"
+    sha256 "9304e3d24d7b64f466ab40885d70decaa961e1eb7af4394895b427906c54f2d0"
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/nanaban/releases/download/v0.2.4/nanaban-aarch64-unknown-linux-gnu"
-      sha256 "478af2388f1b67aff11d451b8b17a79679ed800e2d794f05843977a55ea7c6de"
+      url "https://github.com/bradleydwyer/nanaban/releases/download/v0.2.5/nanaban-aarch64-unknown-linux-gnu"
+      sha256 "722a17f0469c6867743040677a6e7a0ae9d310aa7ac3ca43e88e01a21b6b24dd"
     else
-      url "https://github.com/bradleydwyer/nanaban/releases/download/v0.2.4/nanaban-x86_64-unknown-linux-gnu"
-      sha256 "61b889eea65cda66fd182e6733a0f8d8a79180efcfe2cbf819b75b8d8e0dbe02"
+      url "https://github.com/bradleydwyer/nanaban/releases/download/v0.2.5/nanaban-x86_64-unknown-linux-gnu"
+      sha256 "f5a079f0495e076a53312e2fcb88489215e6e43d1ec2b280a7918c371c5c2cf8"
     end
   end
 
