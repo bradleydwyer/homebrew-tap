@@ -1,26 +1,26 @@
 class SolcastProxy < Formula
   desc "Caching reverse proxy for the Solcast solar forecast API"
   homepage "https://github.com/bradleydwyer/solcast-proxy"
-  version "1.0.3"
+  version "1.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/solcast-proxy/releases/download/v1.0.3/solcast-proxy-aarch64-apple-darwin"
-      sha256 "447d7023f441ec3245fc6af305160c334c471378fb7ce92ad953fb21a71c68b0"
+      url "https://github.com/bradleydwyer/solcast-proxy/releases/download/v1.0.4/solcast-proxy-aarch64-apple-darwin"
+      sha256 "531a87107ad104d008a7c001d82c2524fb54bc58afe27d547fd2cf94729f9fe8"
     else
-      url "https://github.com/bradleydwyer/solcast-proxy/releases/download/v1.0.3/solcast-proxy-x86_64-apple-darwin"
-      sha256 "0e374d7fda5f13c2fe58d1a0dc0a1730429ca106865d89177f92c7a5adc80f34"
+      url "https://github.com/bradleydwyer/solcast-proxy/releases/download/v1.0.4/solcast-proxy-x86_64-apple-darwin"
+      sha256 "c4c4635c3302acce611bb5f5edb9a9c87c69ccde3a70c5a11882d40269b64415"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/solcast-proxy/releases/download/v1.0.3/solcast-proxy-aarch64-unknown-linux-gnu"
-      sha256 "954b805a62deba87624f26fc42e222d99269b8292b1a84969a0bbb19594e3f19"
+      url "https://github.com/bradleydwyer/solcast-proxy/releases/download/v1.0.4/solcast-proxy-aarch64-unknown-linux-gnu"
+      sha256 "2f4afad72f63daa568183fe9858b235e0919eac34854fb32ef5ec58b7429a04e"
     else
-      url "https://github.com/bradleydwyer/solcast-proxy/releases/download/v1.0.3/solcast-proxy-x86_64-unknown-linux-gnu"
-      sha256 "6dddd4ddfa740f3d1cc48cc72c032c7782aa9116be6bf918dd4b4bfab058a830"
+      url "https://github.com/bradleydwyer/solcast-proxy/releases/download/v1.0.4/solcast-proxy-x86_64-unknown-linux-gnu"
+      sha256 "05df259b8fa8222b2769904be4061a0348786e860492c49208f0e7a2e56cf617"
     end
   end
 
