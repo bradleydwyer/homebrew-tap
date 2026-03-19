@@ -1,24 +1,29 @@
 class Caucus < Formula
   desc "Multi-LLM consensus engine — aggregate and synthesize LLM outputs"
   homepage "https://github.com/bradleydwyer/caucus"
-  url "https://github.com/bradleydwyer/caucus/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "8a13427e7948191fd861157f02151bc4208f3efaf9732856742c2c9e56fafcbc"
+  version "1.0.7"
   license "MIT"
 
-  bottle do
-    root_url "https://github.com/bradleydwyer/caucus/releases/download/v1.0.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9bcc57f9de4ce8a3b57020420e3b866a70cb371d05963bbaa9c49868c338c0cb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "88e759f51993a2460cd94da0e64db5b3c4588a0599b915417523bbbe599f398d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "22df102b8b45c106067109dabe40a54c2021a135aef485a4b7835b098b7ee803"
+  on_macos do
+    url "https://github.com/bradleydwyer/caucus/releases/download/v1.0.7/caucus-aarch64-apple-darwin"
+    sha256 "cfc4c188a0cf26773ab9f2929e9cff2a8adc03e9c82f55779b02ca7983daf40b"
   end
 
-  depends_on "rust" => :build
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/bradleydwyer/caucus/releases/download/v1.0.7/caucus-aarch64-unknown-linux-gnu"
+      sha256 "2195ce8ff62763f96a2326c87c1b7b4961fe3ed89f25fce95748c9986c401d38"
+    else
+      url "https://github.com/bradleydwyer/caucus/releases/download/v1.0.7/caucus-x86_64-unknown-linux-gnu"
+      sha256 "a8a5212babee5bae57edcb2a1443d20b11bad0146665c704792d56fd8863ae9e"
+    end
+  end
 
   def install
-    system "cargo", "install", "--locked", "--root", prefix, "--path", "crates/caucus-cli"
+    bin.install Dir["caucus*"].first => "caucus"
   end
 
   test do
-    assert_match "caucus", shell_output("#{bin}/caucus --version")
+    assert_match "caucus", shell_output("\#{bin}/caucus --version")
   end
 end
