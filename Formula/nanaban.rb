@@ -1,24 +1,34 @@
 class Nanaban < Formula
   desc "Gemini image generation CLI (Nano Banana 2 / Pro)"
   homepage "https://github.com/bradleydwyer/nanaban"
-  url "https://github.com/bradleydwyer/nanaban/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "636a78ebfaa9a32d54637a6071b7437578c644d612414df2832d935ebbae7002"
+  version "0.2.3"
   license "MIT"
 
-  bottle do
-    root_url "https://github.com/bradleydwyer/nanaban/releases/download/v0.2.1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "209ce20ecd154ecc5b7c0763188d0dd22bcb873a15f7e67cde34be8fced05fa6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0eef63f23e2594dc7f47fa7b5494f0960fe1e713ddf8a8aa7d935374cf94c0b7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "62f179de27240b15ef10edd5a429a436af0a4d002d3b867a42d7442691495ad3"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/bradleydwyer/nanaban/releases/download/v0.2.3/nanaban-aarch64-apple-darwin"
+      sha256 "e8abee0ae43c57fef15952eb76d0c03297c90557b11d3b790eae08b4fc1fcc7f"
+    else
+      url "https://github.com/bradleydwyer/nanaban/releases/download/v0.2.3/nanaban-x86_64-apple-darwin"
+      sha256 "eece54138864572d5c6f7332cf2bb28f97497af16a3364bf21c3a12f63f880ce"
+    end
   end
 
-  depends_on "rust" => :build
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/bradleydwyer/nanaban/releases/download/v0.2.3/nanaban-aarch64-unknown-linux-gnu"
+      sha256 "e7b90e177cde80b732aa7b51314ca72c49409cd2fdd2bf9ca8ac9be554f25eff"
+    else
+      url "https://github.com/bradleydwyer/nanaban/releases/download/v0.2.3/nanaban-x86_64-unknown-linux-gnu"
+      sha256 "2136c47bf0c0845f178df6404645ccb65562ac743562d75d5b836ed13768032b"
+    end
+  end
 
   def install
-    system "cargo", "install", "--locked", "--root", prefix, "--path", "."
+    bin.install Dir["nanaban*"].first => "nanaban"
   end
 
   test do
-    assert_match "nanaban", shell_output("#{bin}/nanaban --version")
+    assert_match "nanaban", shell_output("\#{bin}/nanaban --version")
   end
 end
