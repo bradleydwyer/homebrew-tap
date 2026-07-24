@@ -1,21 +1,21 @@
 class Caucus < Formula
   desc "Multi-LLM consensus engine — aggregate and synthesize LLM outputs"
   homepage "https://github.com/bradleydwyer/caucus"
-  version "1.1.3"
+  version "1.1.4"
   license "MIT"
 
   on_macos do
-    url "https://github.com/bradleydwyer/caucus/releases/download/v1.1.3/caucus-aarch64-apple-darwin"
-    sha256 "84455f1f7e752da3afc1e975373b4ac6088f22291c741111766290adcb61cfee"
+    url "https://github.com/bradleydwyer/caucus/releases/download/v1.1.4/caucus-aarch64-apple-darwin"
+    sha256 "fbe3ae1e228027b69704820a222adc0cd2f75986a1f71a30a5a8b9f8780e23f6"
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/bradleydwyer/caucus/releases/download/v1.1.3/caucus-aarch64-unknown-linux-gnu"
-      sha256 "cbb1bdee5262bd6287181c9ef2868d736b9833c16b6acc84a9ce2876d53951bc"
+      url "https://github.com/bradleydwyer/caucus/releases/download/v1.1.4/caucus-aarch64-unknown-linux-gnu"
+      sha256 "246c16e8668d26d70d95ed986b0f687caf75dc6040f3fed345c2e5bfb7312cbd"
     else
-      url "https://github.com/bradleydwyer/caucus/releases/download/v1.1.3/caucus-x86_64-unknown-linux-gnu"
-      sha256 "ef708607e61b077b7bebb9a503d80044e9d9625d3bb5d0025d74c6a1586061cd"
+      url "https://github.com/bradleydwyer/caucus/releases/download/v1.1.4/caucus-x86_64-unknown-linux-gnu"
+      sha256 "7101d1b0ba0eca27d2197f5be6a37e9aafc25fb3652f78f0e36fcdf83d80bc0e"
     end
   end
 
